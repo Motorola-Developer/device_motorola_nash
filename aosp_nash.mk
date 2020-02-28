@@ -1,6 +1,6 @@
 # Inherit some common Lineage stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
@@ -18,8 +18,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, device/motorola/nash/device.mk)
 
 # Boot Animtion
-TARGET_BOOTANIMATION_HALF_RES := true
-
+TARGET_BOOT_ANIMATION_RES := 1080
+$(call inherit-product, vendor/MiuiCamera/config.mk)
 
 # Device identifiers
 BUILD_FINGERPRINT := motorola/nash/nash:8.0.0/OPXS27.109-34-10/5:user/release-keys
@@ -27,7 +27,7 @@ PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := nash
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_MODEL := Moto Z2
-PRODUCT_NAME := lineage_nash
+PRODUCT_NAME := aosp_nash
 PRODUCT_RELEASE_NAME := nash
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
