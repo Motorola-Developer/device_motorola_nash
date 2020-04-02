@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_nash.mk
+    $(LOCAL_DIR)/ancient_nash.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_nash-user \
-    aosp_nash-userdebug \
-    aosp_nash-eng
+    ancient_nash-user \
+    ancient_nash-userdebug \
+    ancient_nash-eng
